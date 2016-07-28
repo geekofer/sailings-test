@@ -1,0 +1,148 @@
+@import "bootstrap"
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300)
+
+@font-face
+  font-family: "Lato Black"
+  src: url("../fonts/Lato-Black.eot?") format("eot"),
+    url("../fonts/Lato-Black.woff2") format("woff2"),
+    url("../fonts/Lato-Black.woff") format("woff"),
+    url("../fonts/Lato-Black.ttf") format("truetype"),
+
+/*custom css*/
+$font-stack: 'Lato', sans-serif
+$font-stack2: 'Lato Black', sans-serif
+$orange: #ff9900
+$orange-black: #bb7100
+$gray: #D6D6D6
+$gray-dark: #a7a7a7
+$black: #000000
+$white: #ffffff
+
+body
+  font-family: $font-stack
+  background: $gray
+.heading
+  margin: 0 15px
+  .title-sailings
+    font-weight: bold
+    small
+      font-weight: normal
+      color: $gray-dark
+      font-size: 18px
+
+.cruise-item
+  background: $white
+  margin: 10px
+  position: relative
+.thumbcruise
+  padding: 0
+  border-radius: 0
+  border: 0
+  margin-bottom: 0
+  .thumbcruise-image
+    min-height: 284px
+    img
+      width: 100%
+      height: 100%
+  .cost
+    background: $orange
+    position: absolute
+    top: 35px
+    right: -12px
+    padding: 5px 10px
+    span
+      display: block
+      font-family: $font-stack
+      font-weight: 900
+      font-size: 36px
+      color: $black
+      text-align: right
+      line-height: 3.5rem
+      padding-bottom: 5px
+      padding-left: 10px
+    small
+      color: $black
+    &::before
+      content: ""
+      position: absolute
+      height: 0
+      width: 0 !important
+      border-top: 12px solid $orange-black
+      border-left: 12px solid transparent
+      left: 0
+      bottom: -12px
+      display: none
+    &::after
+      content: ""
+      position: absolute
+      height: 0
+      width: 0 !important
+      border-top: 12px solid $orange-black
+      border-right: 12px solid transparent
+      right: 0
+      bottom: -12px
+  .caption
+    padding: 10px
+    .h2, h2
+      margin: 0
+      font-weight: bold
+    .options
+      .radio
+        span
+          float: right
+          color: $orange
+          font-size: 16px
+          font-weight: bold
+.total-sailing
+  margin-top: 20px
+  border-top: 1px solid $black
+  #msg
+    width: 50%
+    padding: 20px
+    font-weight: bold
+    font-size: 28px
+    float: left
+    min-height: 85px
+    max-height: 85px
+  #total
+    width: 50%
+    padding: 20px
+    background: $orange
+    font-weight: bold
+    font-size: 32px
+    float: right
+    text-align: right
+
+@media (min-width: 480px) and (max-width: 969px)
+  .thumbcruise
+    display: inline-flex
+    .cost
+      top: 15px
+
+@media (min-width: 480px) and (max-width: 706px)
+  .thumbcruise
+    .cost
+      top: 15px
+      left: -12px
+      right: 80%
+      &::before
+        display: block
+      &::after
+        display: none
+  .total-sailing
+    #msg
+      background:  $white
+      font-size: 20px
+
+  .title-sailings
+    small
+      display: block
+
+@media screen and(max-width: 480px)
+  .total-sailing
+    #msg
+      background:  $white
+      font-size: 16px
+  .title-sailings
+    small
+      display: block

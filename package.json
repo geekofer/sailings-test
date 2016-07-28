@@ -1,0 +1,26 @@
+{
+  "name": "test-sailings",
+  "version": "1.0.0",
+  "description": "cruise description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bootstrap",
+    "brunch",
+    "angular",
+    "json"
+  ],
+  "author": "Jorge Chávez <jorgecha48@gmail.com>",
+  "license": "GPL",
+  "dependencies": {
+    "brunch": "^2.8.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync-brunch": "0.0.9",
+    "sass-brunch": "^2.6.3"
+  }
+}
